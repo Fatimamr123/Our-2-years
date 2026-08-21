@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d13">
+
+<title>2 Years of Us ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top,#55263d,#1c1018 50%,#09070a);
+    color:white;
+    font-family:Georgia,"Times New Roman",serif;
+    overflow:hidden;
+}
+
+.container{
+    min-height:100vh;
+    width:92%;
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.card{
+    width:100%;
+    padding:45px 25px;
+    border-radius:35px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 25px 70px rgba(0,0,0,.5);
+    animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.9) translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+.heart{
+    font-size:75px;
+    margin-bottom:20px;
+    animation:beat 1.2s infinite;
+}
+
+@keyframes beat{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.small{
+    font-size:13px;
+    letter-spacing:5px;
+    color:#e5a2b8;
+    margin-bottom:18px;
+}
+
+h1{
+    font-size:clamp(48px,12vw,82px);
+    line-height:1;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:clamp(27px,7vw,40px);
+    margin:25px 0;
+}
+
+p{
+    font-size:17px;
+    line-height:1.9;
+    color:#f8e9ee;
+}
+
+.meri{
+    color:#f1abc1;
+    font-style:italic;
+}
+
+.line{
+    width:80px;
+    height:1px;
+    background:#e1a0b5;
+    margin:25px auto;
+}
+
+button{
+    margin-top:35px;
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#321521;
+    font-size:16px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.07);
+}
+
+.hidden-message{
+    display:none;
+    animation:fade 1.2s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.photo{
+    width:100%;
+    max-width:300px;
+    height:320px;
+    object-fit:cover;
+    border-radius:22px;
+    margin:25px auto;
+    box-shadow:0 15px 40px rgba(0,0,0,.5);
+    display:block;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.floating-heart{
+    position:absolute;
+    bottom:-40px;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:500px){
+
+    .card{
+        padding:38px 20px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+<div class="card">
+
+<!-- FIRST SCREEN -->
+
+<div id="opening">
+
+<div class="heart">❤️</div>
+
+<div class="small">
+S & F
+</div>
+
+<h1>
+2 Years
+</h1>
+
+<h2>
+of Us
+</h2>
+
+<div class="line"></div>
+
+<p>
+Two years ago,
+something beautiful began.
+</p>
+
+<br>
+
+<p class="meri">
+And somehow,
+you're still my favourite person.
+❤️
+</p>
+
+<button onclick="showMessage()">
+Open ❤️
+</button>
+
+</div>
+
+
+<!-- SECOND SCREEN -->
+
+<div class="hidden-message" id="message">
+
+<div class="heart">❤️</div>
+
+<div class="small">
+21 AUGUST 2026
+</div>
+
+<h2>
+Happy 2 Years,
+<br>
+Meri Jaan
+</h2>
+
+<p>
+730 days.
+<br>
+Countless memories.
+<br>
+So many laughs.
+<br>
+A few fights.
+<br>
+A lot of missing you.
+<br>
+And so much love.
+</p>
+
+<div class="line"></div>
+
+<p>
+Thank you for every moment,
+every conversation,
+every memory,
+and every time
+you made me smile.
+</p>
+
+<br>
+
+<p class="meri">
+Meri jaan,
+I wouldn't change
+the story we've written.
+❤️
+</p>
+
+<button onclick="showFinal()">
+One More Thing... 👀
+</button>
+
+</div>
+
+
+<!-- FINAL SCREEN -->
+
+<div class="hidden-message" id="final">
+
+<div class="heart">❤️</div>
+
+<h2>
+Saalim,
+<br>
+my shoonnuuuu...
+</h2>
+
+<br>
+
+<p>
+Two years down.
+<br>
+So many more memories
+waiting for us.
+</p>
+
+<br>
+
+<p class="meri">
+May Allah keep our hearts close,
+protect what is good for us,
+and bless every chapter
+that comes next. 🤲🏻
+</p>
+
+<div class="line"></div>
+
+<h2>
+Happy 2 Years To Us ❤️
+</h2>
+
+<p>
+Here's to us.
+<br>
+Always.
+</p>
+
+<br>
+
+<p class="meri">
+I love you, meri jaan. ❤️
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   SCREEN 2
+========================= */
+
+function showMessage(){
+
+    document.getElementById("opening")
+    .style.display="none";
+
+    document.getElementById("message")
+    .style.display="block";
+
+}
+
+
+/* =========================
+   FINAL SCREEN
+========================= */
+
+function showFinal(){
+
+    document.getElementById("message")
+    .style.display="none";
+
+    document.getElementById("final")
+    .style.display="block";
+
+    heartBurst();
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="floating-heart";
+
+    heart.innerHTML =
+        Math.random() > .2
+        ? "❤️"
+        : "♡";
+
+    heart.style.left =
+        Math.random()*100+"vw";
+
+    heart.style.fontSize =
+        (Math.random()*22+14)+"px";
+
+    heart.style.animationDuration =
+        (Math.random()*4+5)+"s";
+
+    document.getElementById("hearts")
+    .appendChild(heart);
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },9000);
+
+}
+
+setInterval(createHeart,800);
+
+
+/* =========================
+   HEART BURST
+========================= */
+
+function heartBurst(){
+
+    for(let i=0;i<20;i++){
+
+        setTimeout(function(){
+
+            createHeart();
+
+        },i*100);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
